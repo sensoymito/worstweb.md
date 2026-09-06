@@ -11,6 +11,12 @@
 **ダイスを振り、適当なセルにダイスの結果を入れる**
 **セルに書かれている数字と爆弾の場所が矛盾した瞬間、あなたはゲームに負ける**
 ---
+
+:::html
+<canvas id="game" width="640" height="480" style="border: 1px solid #ccc;"></canvas>
+:::
+
+---
 :::html
 <div>
     <a href="https://github.com/sensoymito" style="color: black;">わたしのGithub</a>
