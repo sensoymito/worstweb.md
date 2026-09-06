@@ -4,4 +4,18 @@
 ### このサイト **worstweb.dev** は適当にとったドメインです
 ### 特に意味もない無価値なサイト。まさに最悪なサイトってな(笑)
 ---
-このサイトは[lobster.js](https://hacknock.github.io/lobsterjs/ "lobster.js")によって作成されました。 MIT Licenese
+
+# How to Paper Sweeper
+**普通の6面ダイスと紙を用意する**
+**紙にグリッドを描く**
+**ダイスを振り、適当なセルにダイスの結果を入れる**
+**セルに書かれている数字と爆弾の場所が矛盾した瞬間、あなたはゲームに負ける**
+---
+:::html
+<div>
+    <a href="https://github.com/sensoymito" style="color: black;">わたしのGithub</a>
+</div>
+:::
+
+このサイトは[lobster.js](https://hacknock.github.io/lobsterjs/ "lobster.js")を用いて作成されました。 MIT License
+[worstweb.com](https://worstweb.com "worstweb.com")とは無関係です
