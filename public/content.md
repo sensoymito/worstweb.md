@@ -4,9 +4,9 @@
 ### このサイト **worstweb.dev** は適当にとったドメインです
 ### 特に意味もない無価値なサイト。まさに最悪なサイトってな(笑)
 ---
-このサイトは[lobster.js](https://hacknock.github.io/lobsterjs/ "lobster.js")によって作成されました。 MIT Licenese
----
 # 深層マインスイーパーを開発した
+### 深くなるにつれ真っ黒になってくから
+### あっためて食べてね
 
 :::html
 <iframe src="/sweeper/index.html" width="732" height="732" style="border:none; display:block; margin:0 auto;"></iframe>
