@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "build:love": "powershell -Command \"if (Test-Path game.love) { Remove-Item game.love } ; Compress-Archive -Path main.lua, conf.lua, lib, img -DestinationPath game.zip -Force ; Rename-Item game.zip game.love\"",
+    "build:love": "node scripts/build-love.js",
     "build:web": "echo '' | node node_modules/love.js/index.js game.love dist -c -t Sweeper && node scripts/clean-html.js",
     "build": "npm run build:love && npm run build:web",
     "serve": "npx serve dist",
@@ -18,6 +18,7 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "adm-zip": "^0.5.16",
     "love.js": "^11.4.1"
   }
 }
