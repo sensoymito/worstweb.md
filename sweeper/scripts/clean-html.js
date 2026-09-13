@@ -1,0 +1,48 @@
+const fs = require('fs');
+const path = require('path');
+
+const html = `<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sweeper</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; overflow: hidden; background: #fff; display: flex; justify-content: center; align-items: center; }
+      canvas { display: block; width: 100vmin; height: 100vmin; max-width: 100%; max-height: 100%; image-rendering: pixelated; }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    <script>
+      window.onerror = function(event) { console.error(event); };
+      window.addEventListener("keydown", function(e) {
+        if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+          e.preventDefault();
+        }
+      }, false);
+      var Module = {
+        arguments: ["./game.love"],
+        INITIAL_MEMORY: 16777216,
+        printErr: console.error.bind(console),
+        canvas: document.getElementById('canvas'),
+        setStatus: function(text) {},
+        totalDependencies: 0,
+        remainingDependencies: 0,
+        monitorRunDependencies: function(left) {}
+      };
+    </script>
+    <script type="text/javascript" src="game.js"></script>
+    <script async type="text/javascript" src="love.js" onload="Love(Module)"></script>
+  </body>
+</html>`;
+
+const distDir = path.join(process.cwd(), 'dist');
+if (!fs.existsSync(distDir)) {
+  console.error('dist/ directory not found. Run npm run build:web first.');
+  process.exit(1);
+}
+
+fs.writeFileSync(path.join(distDir, 'index.html'), html, 'utf8');
+console.log('dist/index.html cleaned (no frame)');

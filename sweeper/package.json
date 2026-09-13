@@ -1,0 +1,23 @@
+{
+  "name": "sweeper",
+  "version": "1.0.0",
+  "description": "Layered Minesweeper",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build:love": "powershell -Command \"if (Test-Path game.love) { Remove-Item game.love } ; Compress-Archive -Path main.lua, conf.lua, lib, img -DestinationPath game.zip -Force ; Rename-Item game.zip game.love\"",
+    "build:web": "echo '' | node node_modules/love.js/index.js game.love dist -c -t Sweeper && node scripts/clean-html.js",
+    "build": "npm run build:love && npm run build:web",
+    "serve": "npx serve dist",
+    "start": "npm run build && npm run serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "love.js": "^11.4.1"
+  }
+}

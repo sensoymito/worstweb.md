@@ -4,15 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "npm run build:sweeper && vite",
+    "build": "npm run build:sweeper && tsc && vite build",
+    "build:sweeper": "node scripts/build-sweeper.js",
     "preview": "vite preview"
   },
   "devDependencies": {
     "typescript": "~6.0.2",
     "vite": "^8.2.2"
-  },
-  "dependencies": {
-    "kaplay": "^3001.0.19"
   }
 }

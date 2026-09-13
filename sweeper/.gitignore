@@ -1,0 +1,5 @@
+node_modules/
+dist/
+game.love
+*.zip
+.DS_Store

@@ -4,16 +4,12 @@
 ### このサイト **worstweb.dev** は適当にとったドメインです
 ### 特に意味もない無価値なサイト。まさに最悪なサイトってな(笑)
 ---
-
-# How to Paper Sweeper
-**普通の6面ダイスと紙を用意する**
-**紙にグリッドを描く**
-**ダイスを振り、適当なセルにダイスの結果を入れる**
-**セルに書かれている数字と爆弾の場所が矛盾した瞬間、あなたはゲームに負ける**
+このサイトは[lobster.js](https://hacknock.github.io/lobsterjs/ "lobster.js")によって作成されました。 MIT Licenese
 ---
+# 深層マインスイーパーを開発した
 
 :::html
-<canvas id="game" width="640" height="480" style="border: 1px solid #ccc;"></canvas>
+<iframe src="/sweeper/index.html" width="732" height="732" style="border:none; display:block; margin:0 auto;"></iframe>
 :::
 
 ---
