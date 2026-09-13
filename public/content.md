@@ -9,7 +9,7 @@
 ### あっためて食べてね
 
 :::html
-<iframe src="/sweeper/index.html" width="732" height="732" style="border:none; display:block; margin:0 auto;"></iframe>
+<iframe src="/sweeper/index.html" width="832" height="832" style="border:none; display:block; margin:0 auto;"></iframe>
 :::
 
 ---
